@@ -18,9 +18,9 @@ body {
     background-color: white;
 }
 
-.abc {
+#abc{
     text-align: center;
-    margin: 2px 0;
+    margin: 2px 2px;
     font-size: 18px;
     padding: 10px;
     color: #606162;
@@ -49,9 +49,28 @@ body {
     border: none;
 }
 
+
+#first-row-cards{
+    padding: 19px;
+    margin: 2px 2px;
+}
+
+#second-row-cards{
+     padding: 19px;
+    margin: 2px 2px;
+}
+
+#third-row-cards{
+     padding: 19px;
+    margin: 2px 2px;
+}
+
 #enter-text {
     border: none;
     background-color: #f8f8f8;
+    height: 30px;
+    padding: 10px;
+    margin: 1px 310px;
 }
 
 .card-img-top {
@@ -59,9 +78,6 @@ body {
     padding: 4px;
 }
 
-/* .card-group {
-    gap: 2px;
-} */
 
 
 #show-tracker-nav {
@@ -70,7 +86,7 @@ body {
     border-radius: 4px;
 }
 
-#add{
+#add {
     background-color:  #e4e7ea;
      border: 1.5px dotted;
      border-radius: 4px;
@@ -97,8 +113,11 @@ body {
 }
 
  a {
-        text-decoration: none;
+    text-decoration: none;
+     padding: 10px;
     }
+
+     
 
 #movie-name {
         text-align: center;
@@ -173,6 +192,7 @@ input[type="text"]{
         color: white;
         margin: -1px 11px;
     }
+  
 
     #heart1 {
         color: #a94442;
