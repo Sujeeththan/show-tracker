@@ -46,16 +46,16 @@
                 <h4><b>Log in</b></h4>
             </div>
 
-            <form action="">
+            <form id="loginForm" action="/">
                 <div class="include">
-                    <input type="email" name="email" id="enter-email" placeholder="&#64; Email">
+                    <input type="email" name="email" id="enter-email" placeholder="&#64; Email" required>
                     <br><br>
                     <input type="password" name="password" id="enter-password" placeholder="&#128273;
- Password"><br> <br>
+ Password" required><br> <br>
                 </div>
 
                 <div>
-                    <button class="lo-in"><b>Log in</b></button>
+                    <button type="submit" class="lo-in"><b>Log in</b></button>
                 </div>
                 <br>
                 <div>
@@ -65,9 +65,9 @@
                 </div>
 
                 <div>
-                    <button class="under-btn1"><b> &#102; Sign in with Facebook</b></button>
+                    <button type="submit" class="under-btn1"><b> &#102; Sign in with Facebook</b></button>
                     <br><br>
-                    <button class="under-btn2"><b> &#x67;<sup>+</sup> Sign with Google</b></button>
+                    <button type="submit" class="under-btn2"><b> &#x67;<sup>+</sup> Sign with Google</b></button>
                 </div>
             </form>
 
