@@ -50,20 +50,20 @@ body {
 }
 
 
-#first-row-cards{
+/* #first-row-cards{
     padding: 19px;
     margin: 2px 2px;
-}
+} */
 
-#second-row-cards{
+/* #second-row-cards{
      padding: 19px;
     margin: 2px 2px;
-}
+} */
 
-#third-row-cards{
+/* #third-row-cards{
      padding: 19px;
     margin: 2px 2px;
-}
+} */
 
 #enter-text {
     border: none;
@@ -115,6 +115,7 @@ body {
  a {
     text-decoration: none;
      padding: 10px;
+     color: black;
     }
 
      
@@ -324,6 +325,7 @@ input[type="password"]{
         margin: 60px auto;
         border-radius: 1px;
         box-shadow: 0  1px 5px;
+        height: 450px;
     }
 
 body {
