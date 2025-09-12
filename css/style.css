@@ -1,54 +1,53 @@
 /* Home page start */
 body {
-    background-color: #e4e7ec;
-    font-family: Arial, Helvetica, sans-serif;
+  background-color: #e4e7ec;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container-fluid {
-    box-shadow: 0 1px 4px 0px;
+  box-shadow: 0 1px 4px 0px;
 }
 
 .navbar-brand {
-    background-color: #ffe939;
+  background-color: #ffe939;
 }
 
 .box {
-    border: none;
-    height: 150px;
-    background-color: white;
+  border: none;
+  height: 150px;
+  background-color: white;
 }
 
-#abc{
-    text-align: center;
-    margin: 2px 2px;
-    font-size: 18px;
-    padding: 10px;
-    color: #606162;
+#abc {
+  text-align: center;
+  margin: 2px 2px;
+  font-size: 18px;
+  padding: 10px;
+  color: #606162;
 }
 
 .click {
-    text-align: center;
+  text-align: center;
 }
 
 .click button {
-    background: #e4e7ec;
-    border: none;
-    margin: 4px;
-    cursor: pointer;
-    border-radius: 2px;
-    color: #65676c;
+  background: #e4e7ec;
+  border: none;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #65676c;
 }
 
 .click button:hover {
-    background-color: #c1c7d0;
+  background-color: #c1c7d0;
 }
 
 #cards-many {
-    width: 1000px;
-    margin: 10px auto;
-    border: none;
+  width: 1000px;
+  margin: 10px auto;
+  border: none;
 }
-
 
 /* #first-row-cards{
     padding: 19px;
@@ -66,310 +65,335 @@ body {
 } */
 
 #enter-text {
-    border: none;
-    background-color: #f8f8f8;
-    height: 30px;
-    padding: 10px;
-    margin: 1px 310px;
+  border: none;
+  background-color: #f8f8f8;
+  height: 30px;
+  padding: 10px;
+  margin: 1px 310px;
 }
 
 .card-img-top {
-    border-radius: 15px;
-    padding: 4px;
+  border-radius: 15px;
+  padding: 4px;
 }
 
-
-
 #show-tracker-nav {
-    background-color: #e4e7ea;
-    border: 1.5px dotted;
-    border-radius: 4px;
+  background-color: #e4e7ea;
+  border: 1.5px dotted;
+  border-radius: 4px;
 }
 
 #add {
-    background-color:  #e4e7ea;
-     border: 1.5px dotted;
-     border-radius: 4px;
+  background-color: #e4e7ea;
+  border: 1.5px dotted;
+  border-radius: 4px;
 }
 
 #log-in {
-    color: #65676c;
+  color: #65676c;
 }
 
-.log-btn{
-     background-color:  #e4e7ea;
-     border: 1.5px dotted;
-     border-radius: 4px;
+.log-btn {
+  background-color: #e4e7ea;
+  border: 1.5px dotted;
+  border-radius: 4px;
 }
 
-.sign-btn{
-     background-color:  #e4e7ea;
-     border: 1.5px dotted;
-     border-radius: 4px;
+.sign-btn {
+  background-color: #e4e7ea;
+  border: 1.5px dotted;
+  border-radius: 4px;
 }
 
-#sign-up{
-   color: #65676c;
+#sign-up {
+  color: #65676c;
 }
 
- a {
-    text-decoration: none;
-     padding: 10px;
-     color: black;
-    }
-
-     
+a {
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+}
 
 #movie-name {
-        text-align: center;
-    }
+  text-align: center;
+}
 
-#border-none-cards{
-        border: none;
-    }
+#border-none-cards {
+  border: none;
+}
 /* Home page end */
 
-
-
 /* Add page start */
- body {
-        background-color: #e4e7ec;
-    }
+body {
+  background-color: #e4e7ec;
+}
 
 #one-card {
-        width: 950px;
-        padding: 10px;
-        margin: 70px auto;
-        border-radius: 1px;
-    }
+  width: 950px;
+  padding: 10px;
+  margin: 70px auto;
+  border-radius: 1px;
+}
 
 #add-text {
-        width: 100%;
-        border: 1px solid;
-        height: 30px;
-    }
+  width: 100%;
+  border: 1px solid;
+  height: 30px;
+}
 
 .btn-primary {
-        border-radius: 2px;
-        border: none;
-        background-color: #6ba9f7;
-        height: 30px;
-        width: 50px;
-        color: white;
-    }
+  border-radius: 2px;
+  border: none;
+  background-color: #6ba9f7;
+  height: 30px;
+  width: 50px;
+  color: white;
+}
 
 .btn-primary:hover {
-        background-color: #5d9ff0;
-    }
+  background-color: #5d9ff0;
+}
 
-input[type="text"]{
-        padding: 10px;
-    }
+input[type="text"] {
+  padding: 10px;
+}
 /* Add page end */
 
-
-
 /* Details page start */
-  #detail-card {
-        margin: 50px auto;
-        border: none;
-        border-radius: 0px;
-        height: 330px;
-        box-shadow: 0 1px 5px;
-    }
+#detail-card {
+  margin: 50px auto;
+  border: none;
+  border-radius: 0px;
+  height: 330px;
+  box-shadow: 0 1px 5px;
+}
 
-    #detail-img {
-        padding: 10px;
-        border-radius: 6%;
-        margin: 0px 2px;
-    }
+#detail-img {
+  padding: 10px;
+  border-radius: 6%;
+  margin: 0px 2px;
+}
 
-    .detail-login-btn {
-        width: 200px;
-        background-color: #1d7cf4;
-        border: none;
-        border-radius: 2px;
-        height: 30px;
-        color: white;
-        margin: -1px 11px;
-    }
-  
+.detail-login-btn {
+  width: 200px;
+  background-color: #1d7cf4;
+  border: none;
+  border-radius: 2px;
+  height: 30px;
+  color: white;
+  margin: -1px 11px;
+}
 
-    #heart1 {
-        color: #a94442;
-        margin: 0px 10%;
-    }
+#heart1 {
+  color: #a94442;
+  margin: 0px 10%;
+}
 
-    #heart2 {
-        color: #a94442;
-        margin: 0px 9%;
-    }
+#heart2 {
+  color: #a94442;
+  margin: 0px 9%;
+}
 
-    #card-head {
-        padding-right: 10px;
-    }
+#card-head {
+  padding-right: 10px;
+}
 
-    .card-text {
-        font-size: small;
-    }
+.card-text {
+  font-size: small;
+}
 
-    #details-two-card {
-        width: 800px;
-        height: 50px;
-        box-shadow: 0 1px 5px;
-        background-color: #e5f7fd;
-    }
+#details-two-card {
+  width: 800px;
+  height: 50px;
+  box-shadow: 0 1px 5px;
+  background-color: #e5f7fd;
+}
 
-    .detail-two-text {
-        padding: 10px;
-    }
+.detail-two-text {
+  padding: 10px;
+}
 /* Details page end */
 
-
-
 /* Login page start */
- #login-card {
-        padding: 10px;
-        margin: 60px auto;
-        border-radius: 1px;
-        box-shadow: 0  1px 5px;
-    }
+#login-card {
+  padding: 10px;
+  margin: 60px auto;
+  border-radius: 1px;
+  box-shadow: 0 1px 5px;
+}
 
 .login {
-        color: black;
-        text-align: center;
-    }
+  color: black;
+  text-align: center;
+}
 
-#enter-email {
-        width: 100%;
-        height: 30px;
-    }
+#enter-Email {
+  width: 100%;
+  height: 30px;
+}
 
 #enter-password {
-        width: 100%;
-        height: 30px;
-    }
-
+  width: 100%;
+  height: 30px;
+}
 
 .or {
-        text-align: center;
-    }
+  text-align: center;
+}
 
 .lo-in {
-        width: 100%;
-        background-color: #6eca96;
-        border-radius: 3px;
-        border: none;
-        height: 35px;
-        color: white;
-    }
+  width: 100%;
+  padding: 5px;
+  background-color: #6eca96;
+  border-radius: 3px;
+  border: none;
+  height: 35px;
+  color: white;
+  cursor: pointer;
+}
 
 .lo-in:hover {
-        background-color: #60c38b;
-    }
+  background-color: #60c38b;
+}
 
 .forgot {
-        padding: 40px;
-    }
-
+  padding: 40px;
+}
 
 .account {
-        color: #999a9d;
-    }
+  color: #999a9d;
+}
 
 .under-btn1 {
-        width: 100%;
-        background-color: #3b5998;
-        border-radius: 3px;
-        border: none;
-        height: 35px;
-        color: white;
-    }
+  width: 100%;
+  background-color: #3b5998;
+  border-radius: 3px;
+  border: none;
+  height: 35px;
+  color: white;
+}
 
 .under-btn1:hover {
-        background-color: #33508d;
-    }
+  background-color: #33508d;
+}
 
 .under-btn2 {
-        width: 100%;
-        background-color: #dd4b39;
-        border-radius: 3px;
-        border: none;
-        height: 35px;
-        color: white;
-    }
+  width: 100%;
+  background-color: #dd4b39;
+  border-radius: 3px;
+  border: none;
+  height: 35px;
+  color: white;
+}
 
 .under-btn2:hover {
-        background-color: #ca412e;
-    }
+  background-color: #ca412e;
+}
 
 body {
-        background-color: #e4e7ec;
-    }
+  background-color: #e4e7ec;
+}
 
-input[type="email"]{
-        padding: 10px;
-    }
+/* input[type="email"] {
+  padding: 15px 10px;
+  margin: 10px;
+}
 
-    
-input[type="password"]{
-        padding: 10px;
-    }
+input[type="password"] {
+  padding: 15px 10px;
+} */
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 3px;
+  display: none;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 15px 10px;
+  margin: 8px -1px;
+  border-radius: 3px;
+  border: 1px solid;
+}
+
 /* Login page end */
 
-
-
 /* Signup page start */
- #signup-card {
-        padding: 10px;
-        margin: 60px auto;
-        border-radius: 1px;
-        box-shadow: 0  1px 5px;
-        height: 450px;
-    }
+#signup-card {
+  padding: 10px;
+  margin: 60px auto;
+  border-radius: 1px;
+  box-shadow: 0 1px 5px;
+}
 
 body {
-        background-color: #e4e7ec;
-    }
+  background-color: #e4e7ec;
+}
 
 .signup {
-        text-align: center;
-    }
+  text-align: center;
+}
 
-#enter-name {
-        width: 100%;
-        height: 30px;
-    }
+#enter-Name {
+  width: 100%;
+  height: 30px;
+}
 
-#enter-email {
-        width: 100%;
-        height: 30px;
-    }
+#enter-Email {
+  width: 100%;
+  height: 30px;
+}
 
-#enter-password {
-        width: 100%;
-        height: 30px;
-    }
+#enter-Password {
+  width: 100%;
+  height: 30px;
+}
 
 .By {
-        color: #595a5b;
-        text-align: center;
-    }
+  color: #595a5b;
+  text-align: center;
+}
 
 .signbtn {
-        width: 100%;
-        border: none;
-        border-radius: 3px;
-        height: 33px;
-        background-color: #6ba9f7;
-        color: white;
-    }
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  height: 33px;
+  background-color: #6ba9f7;
+  color: white;
+  cursor: pointer;
+}
 
 .signbtn:hover {
-        background-color: #5693de;
-    }
+  background-color: #5693de;
+}
 
 .under {
-        text-align: center;
-    }
+  text-align: center;
+}
+
+#name-Error {
+  font-size: 12px;
+  color: rgb(240, 64, 64);
+}
+
+#email-Error {
+  font-size: 12px;
+  color: rgb(240, 64, 64);
+}
+
+#password-Error {
+  font-size: 12px;
+  color: rgb(240, 64, 64);
+}
+
+input[type="text"] {
+  padding: 15px 10px;
+  margin: 8px -1px;
+  border-radius: 3px;
+  border: 1px solid;
+}
 /* Signup page end */

@@ -1,59 +1,50 @@
-const form = document.getElementById('loginForm');
-const email = document.getElementById('enter-email');
-const password = document.getElementById('enter-password')
+const loginForm = document.getElementById("loginForm");
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
+loginForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  //   alert()
 
-    validateInputs();
+  let isValid = true;
+
+  // name validation
+  const emailError = document.getElementById("emailError");
+  const emailField = document.getElementById("enter-Email");
+  const emailRegex =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
+
+  if (emailField.value.trim() === "") {
+    isValid = false;
+    emailError.style.display = "block";
+    emailError.innerHTML = "Email is required";
+  } else if (!emailRegex.test(emailField.value.trim())) {
+    isValid = false;
+    emailError.style.display = "block";
+    emailError.innerHTML = "Invalid email format. Please use name@example.com";
+  } else {
+    isValid = false;
+    emailError.style.display = "none";
+  }
+
+  //   password validation
+  const passwordError = document.getElementById("passwordError");
+  const passwordField = document.getElementById("enter-password");
+  const passwordRegex = /^[a-zA-Z0-9][^?@&]{8}$/;
+
+  if (passwordField.value.trim() === "") {
+    isValid = false;
+    passwordError.style.display = "block";
+    passwordError.innerHTML = "Password is required";
+  } else if (!passwordRegex.test(passwordField.value.trim())) {
+    isValid = false;
+    passwordError.style.display = "block";
+    passwordError.innerHTML = "Password must be at least 8 characters long";
+  } else {
+    isValid = false;
+    passwordError.style.display = "none";
+  }
+  //    is valid
+  if (isValid) {
+    alert("student register successfully");
+    studentForm.reset();
+  }
 });
-
-const setError = (element,message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success')
-}
-
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-}
-
-const isvalidEmail = email => {
-    const re =
-  /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    return re.test(String(email).toLocaleLowerCase());
-}
-
-const validateInputs = () => {
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-
-
-    if (emailValue === '') {
-        setError(email,'Email is required');
-    } else if (!isvalidEmail(emailValue)) {
-        setError(email, 'Provide a valid email address');
-    } else {
-        setSuccess(email);
-    }
-
-
-     if (passwordValue === '') {
-        setError(password, 'Password is required');
-    } else if (passwordValue.length < 8) {
-        setError(password, 'Password must be at least 8 character.')
-    } else{
-        setSuccess(password);
-    }
-    console.log(validateInputs);
-    
-}
-
