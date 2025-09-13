@@ -14,7 +14,7 @@ signupForm.addEventListener("submit", function (event) {
   if (nameField.value.trim() === "") {
     isValid = false;
     nameError.style.display = "block";
-    nameError.innerHTML = "Name is required";
+    nameError.innerHTML = " Your name is required";
   } else if (!nameRegex.test(nameField.value.trim())) {
     isValid = false;
     nameError.style.display = "block";
@@ -34,11 +34,11 @@ signupForm.addEventListener("submit", function (event) {
   if (emailField.value.trim() === "") {
     isValid = false;
     emailError.style.display = "block";
-    emailError.innerHTML = "Email is required";
+    emailError.innerHTML = "Your email is required";
   } else if (!emailRegex.test(emailField.value.trim())) {
     isValid = false;
     emailError.style.display = "block";
-    emailError.innerHTML = "Invalid email format. Please use name@example.com";
+    emailError.innerHTML = "Your email address is invalid";
   } else {
     isValid = false;
     emailError.style.display = "none";
@@ -52,7 +52,7 @@ signupForm.addEventListener("submit", function (event) {
   if (passwordField.value.trim() === "") {
     isValid = false;
     passwordError.style.display = "block";
-    passwordError.innerHTML = " Password is required";
+    passwordError.innerHTML = "Password is required";
   } else if (!passwordRegex.test(passwordField.value.trim())) {
     isValid = false;
     passwordError.style.display = "block";
@@ -64,7 +64,7 @@ signupForm.addEventListener("submit", function (event) {
 
   //    is valid
   if (isValid) {
-    alert("student register successfully");
+    alert("Student register successfully");
     studentForm.reset();
   }
 });

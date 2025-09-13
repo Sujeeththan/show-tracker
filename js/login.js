@@ -15,7 +15,7 @@ loginForm.addEventListener("submit", function (event) {
   if (emailField.value.trim() === "") {
     isValid = false;
     emailError.style.display = "block";
-    emailError.innerHTML = "Email is required";
+    emailError.innerHTML = "Your email is required";
   } else if (!emailRegex.test(emailField.value.trim())) {
     isValid = false;
     emailError.style.display = "block";
