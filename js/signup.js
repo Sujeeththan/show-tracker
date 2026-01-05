@@ -1,70 +1,58 @@
 const signupForm = document.getElementById("signupForm");
+const nameError = document.getElementById("name-Error");
+const emailError = document.getElementById("email-Error");
+const passwordError = document.getElementById("password-Error");
 
 signupForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  //   alert()
-
+  
   let isValid = true;
-
-  // name validation
-  const nameError = document.getElementById("name-Error");
   const nameField = document.getElementById("enter-Name");
-  const nameRegex = /^[a-zA-Z]{3,}$/;
-
-  if (nameField.value.trim() === "") {
-    isValid = false;
-    nameError.style.display = "block";
-    nameError.innerHTML = " Your name is required";
-  } else if (!nameRegex.test(nameField.value.trim())) {
-    isValid = false;
-    nameError.style.display = "block";
-    nameError.innerHTML =
-      "Name must be atleast 3 characters and contain only alphabets";
-  } else {
-    isValid = false;
-    nameError.style.display = "none";
-  }
-
-  // email validation
-  const emailError = document.getElementById("email-Error");
   const emailField = document.getElementById("enter-Email");
-  const emailRegex =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
-  if (emailField.value.trim() === "") {
-    isValid = false;
-    emailError.style.display = "block";
-    emailError.innerHTML = "Your email is required";
-  } else if (!emailRegex.test(emailField.value.trim())) {
-    isValid = false;
-    emailError.style.display = "block";
-    emailError.innerHTML = "Your email address is invalid";
-  } else {
-    isValid = false;
-    emailError.style.display = "none";
-  }
-
-  // password validation
-  const passwordError = document.getElementById("password-Error");
   const passwordField = document.getElementById("enter-Password");
-  const passwordRegex = /^[a-zA-Z0-9][^?@&]{8}$/;
 
-  if (passwordField.value.trim() === "") {
-    isValid = false;
-    passwordError.style.display = "block";
-    passwordError.innerHTML = "Password is required";
-  } else if (!passwordRegex.test(passwordField.value.trim())) {
-    isValid = false;
-    passwordError.style.display = "block";
-    passwordError.innerHTML = "Password must be at least 8 characters long";
-  } else {
-    isValid = false;
-    passwordError.style.display = "none";
+  // Reset errors
+  nameError.style.display = "none";
+  emailError.style.display = "none";
+  passwordError.style.display = "none";
+
+  // Name Validation
+  if (!nameField.value.trim() || nameField.value.length < 3) {
+      nameError.textContent = "Name must be at least 3 characters";
+      nameError.style.display = "block";
+      isValid = false;
   }
 
-  //    is valid
+  // Email Validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(emailField.value.trim())) {
+      emailError.textContent = "Invalid email format";
+      emailError.style.display = "block";
+      isValid = false;
+  }
+
+  // Password Validation
+  if (passwordField.value.length < 8) {
+      passwordError.textContent = "Password must be at least 8 characters";
+      passwordError.style.display = "block";
+      isValid = false;
+  }
+
   if (isValid) {
-    alert("Student register successfully");
-    studentForm.reset();
+    // Simulate Data Store for users (optional, but good for completeness)
+    const newUser = {
+        name: nameField.value,
+        email: emailField.value,
+        password: passwordField.value // In real app, never store plain text
+    };
+
+    // Auto login
+    localStorage.setItem('currentUser', JSON.stringify({
+        name: newUser.name,
+        email: newUser.email
+    }));
+
+    alert("Account created successfully!");
+    window.location.href = './index.html';
   }
 });

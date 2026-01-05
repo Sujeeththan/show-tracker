@@ -1,79 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add page</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Show - Show Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
 
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Show <b>Tracker</b></a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarScroll"
-          aria-controls="navbarScroll"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul
-            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-            style="--bs-scroll-height: 100px"
-          >
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./index.html" id=""
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./add.html" id="add">Add</a>
-            </li>
-          </ul>
-
-          <div>
-            <a href="./login.html" id="log-in" class="">Login</a>
-            <a href="./signup.html" id="sign-up" class="">Sign up</a>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="./index.html">Show <b>Tracker</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./add.html">Add Show</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-    <div class="card" id="one-card">
-      <div class="card-header">
-        <b>Add Tv Show</b>
-      </div>
-      <form action="">
-        <div class="card-body">
-          <h6 class="card-title"><b>Name</b></h6>
-          <input
-            type="text"
-            name="text"
-            id="add-text"
-            placeholder="Enter Tv Show name"
-          /><br /><br />
-          <button class="btn-primary"><b>Add</b></button>
+
+    <div class="container">
+        <div class="form-container">
+            <h2 class="form-title">Add New Show</h2>
+            <form id="addShowForm">
+                <div class="mb-3">
+                    <label class="form-label text-muted">Show Title</label>
+                    <input type="text" class="form-control" id="showTitle" placeholder="e.g. Breaking Bad" required>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label text-muted">Image URL</label>
+                    <input type="text" class="form-control" id="showImage" placeholder="https://..." required>
+                    <div class="form-text text-muted">Using a placeholder for now is fine.</div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label text-muted">Genre</label>
+                        <select class="form-control" id="showGenre">
+                            <option value="Action">Action</option>
+                            <option value="Adventure">Adventure</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Crime">Crime</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Horror">Horror</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Thriller">Thriller</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label text-muted">Episodes</label>
+                        <input type="number" class="form-control" id="showEpisodes" placeholder="0" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-muted">Description</label>
+                    <textarea class="form-control" id="showDesc" rows="3" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Add Show</button>
+            </form>
         </div>
-      </form>
     </div>
 
+    <script src="./js/app.js"></script>
     <script src="./js/add.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

@@ -1,50 +1,41 @@
 const loginForm = document.getElementById("loginForm");
+const emailError = document.getElementById("emailError");
+const passwordError = document.getElementById("passwordError");
 
 loginForm.addEventListener("submit", function (event) {
   event.preventDefault();
-  //   alert()
-
+  
   let isValid = true;
-
-  // name validation
-  const emailError = document.getElementById("emailError");
   const emailField = document.getElementById("enter-Email");
-  const emailRegex =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
-
-  if (emailField.value.trim() === "") {
-    isValid = false;
-    emailError.style.display = "block";
-    emailError.innerHTML = "Your email is required";
-  } else if (!emailRegex.test(emailField.value.trim())) {
-    isValid = false;
-    emailError.style.display = "block";
-    emailError.innerHTML = "Invalid email format. Please use name@example.com";
-  } else {
-    isValid = false;
-    emailError.style.display = "none";
-  }
-
-  //   password validation
-  const passwordError = document.getElementById("passwordError");
   const passwordField = document.getElementById("enter-password");
-  const passwordRegex = /^[a-zA-Z0-9][^?@&]{8}$/;
 
-  if (passwordField.value.trim() === "") {
+  // Reset errors
+  emailError.style.display = "none";
+  passwordError.style.display = "none";
+
+  // Simple validation
+  if (!emailField.value.trim()) {
+    emailError.textContent = "Email is required";
+    emailError.style.display = "block";
     isValid = false;
-    passwordError.style.display = "block";
-    passwordError.innerHTML = "Password is required";
-  } else if (!passwordRegex.test(passwordField.value.trim())) {
-    isValid = false;
-    passwordError.style.display = "block";
-    passwordError.innerHTML = "Password must be at least 8 characters long";
-  } else {
-    isValid = false;
-    passwordError.style.display = "none";
   }
-  //    is valid
+
+  if (!passwordField.value.trim()) {
+    passwordError.textContent = "Password is required";
+    passwordError.style.display = "block";
+    isValid = false;
+  }
+
   if (isValid) {
-    alert("student register successfully");
-    studentForm.reset();
+    // Simulate login - extract name from email for demo purposes if no user db
+    // In a real app we would check credentials
+    const user = {
+        name: emailField.value.split('@')[0],
+        email: emailField.value
+    };
+    
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    // Redirect to home
+    window.location.href = './index.html';
   }
 });
